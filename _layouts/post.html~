@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<h2>{{ page.title }}</h2>
+<p class="meta">{{ page.date | date_to_string }}</p>
+<p style="text-align: center">text</p>
+{{ content }}

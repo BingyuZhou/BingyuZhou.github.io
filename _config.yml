@@ -1,0 +1,18 @@
+# Setup
+title:        Bingyu Zhou's Blog
+tagline:      Sharing knowledge in Robotics, AI and Control
+baseurl:      ""
+paginate:     1
+locale:       "en"
+
+# About/contact
+author:
+  name:       Bingyu Zhou
+  url:        https://www.linkedin.com/in/bingyuzhou/
+
+# Gems
+gems:
+  - jekyll-paginate
+
+#Others
+markdown: kramdown
