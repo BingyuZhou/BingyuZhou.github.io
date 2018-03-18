@@ -7,7 +7,7 @@ categories: main
 
 Batch normalization, as it is proposed in [1], is a popular technique in deep learning to speed up the training progress and reduce the difficulty to train deep neural networks. As the authors in [1] hypothsize that the shifted distribution of the features may causes the training much harder, especially at deep layers. The deep learning methods usually works better when the input of each layer have uncorrelated feature with a zero mean and an unit variance. Therefore, researchers come up with ideas to build up batch normalization layers which try to normalize the input to a nice distribution with zero mean and unit variance. 
 
-The batch normalization layer is usually before nonlinear layers, like *ReLU* and *tanh*. In order to be consistent with the minibatch optimization, the input features are normalized according to the chosen batch. And the *running mean* and *running variance* are updated during each batch by an update rate called *momentum*. Eventually, the *running mean* and *running variance* will be the estimated mean and variance for the whole training data set. However, not all layers prefer the normalized input during the training preocess. The smart idea of batch normalization is the design of two learning parameters $\gamma$ and $\beta$. They control how much to unnormalize the features. When $\gamma=\sqrt{\sigma}$ and $\beta=\mu$, the original unnormalized features are restored. By learning these two parameters, the preference of input's distribution for each batch normalization layer can be specified. After training, the learning parameters ($\gamma, \beta$) and the *running mean* and the *running variance* are determined. They can be used in the test mode to normalize the input.
+The batch normalization layer is usually before nonlinear layers, like *ReLU* and *tanh*. In order to be consistent with the minibatch optimization, the input features are normalized according to the chosen batch. And the *running mean* and *running variance* are updated during each batch by an update rate called *momentum*. Eventually, the *running mean* and *running variance* will be the estimated mean and variance for the whole training data set. However, not all layers prefer the normalized input during the training preocess. The smart idea of batch normalization is the design of two learning parameters $$\gamma$$ and $$\beta$$. They control how much to unnormalize the features. When $$\gamma=\sqrt{\sigma}$$ and $$\beta=\mu$$, the original unnormalized features are restored. By learning these two parameters, the preference of input's distribution for each batch normalization layer can be specified. After training, the learning parameters ($$\gamma, \beta$$) and the *running mean* and the *running variance* are determined. They can be used in the test mode to normalize the input.
 
 ## Forward pass
 
@@ -15,14 +15,14 @@ It is easy to understand and code the forward pass. Just pay attention that batc
 
 The forward pass can be described in the following formula:
 
-$
+$$
 \begin{align*}
 y &= \gamma \hat{x}+\beta\\
 \hat{x} &= \frac{x-\mu}{\sqrt{\sigma^2}}\\
 \mu &= \frac{\sum x}{n}\\
 \sigma^2 &= \frac{\sum{(x-\mu)^2}}{n}
 \end{align*}
-$
+$$
 
 ## Backward pass
 
