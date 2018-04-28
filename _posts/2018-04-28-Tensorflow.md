@@ -9,19 +9,19 @@ Ubuntu 18.04 is released recently. Many developers will adapt the Tensorflow dev
 
 ## Platforms
 
-Ubuntu 18.04
+- Ubuntu 18.04
 
-Tensorflow 1.7
+- Tensorflow 1.7
 
-CUDA 9.1
+- CUDA 9.1
 
-cuDNN v7.1.3 for CUDA 9.1
+- cuDNN v7.1.3 for CUDA 9.1
 
-Anaconda (Python 3.6)
+- Anaconda (Python 3.6)
 
 ## Ubuntu 18.04
 
-For the installation of Ubuntu 18.04, please refer [here](https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-desktop?_ga=2.151141374.653516307.1524945589-1651284035.1524945589#0)
+For the installation of Ubuntu 18.04, please refer [here](https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-desktop?_ga=2.151141374.653516307.1524945589-1651284035.1524945589#0).
 
 ## Anaconda
 
