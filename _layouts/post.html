@@ -1,10 +1,12 @@
+--- 
+layout: default  
 ---
-layout: default
----
-<script type="text/javascript"
-    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 <h1>{{ page.title }}</h1>
 <p class="meta">{{ page.date | date_to_string }}</p>
 
 {{ content }}
+
+{% include disqus.html %}
+{% if page.comments %} • <a href="https://bingyuzhou.github.io{{ page.url }}#disqus_thread">0 Comments</a>{% endif %}

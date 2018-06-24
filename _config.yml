@@ -2,13 +2,16 @@
 title:        Bingyu Zhou's Blog
 tagline:      When AI encounters Robotics and Control
 baseurl:      ""
-paginate:     1
+paginate:     3
 locale:       "en"
+github_username: BingyuZhou
+timezone: Europe/Berlin
 
 # About/contact
 author:
   name:       Bingyu Zhou
   url:        https://www.linkedin.com/in/bingyuzhou/
+  
 
 # Gems
 plugins:
@@ -16,3 +19,5 @@ plugins:
 
 #Others
 markdown: kramdown
+kramdon:
+  math_engine: mathjax
