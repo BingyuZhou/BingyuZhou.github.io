@@ -1,6 +1,8 @@
 --- 
 layout: default  
+comments: true
 ---
+
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 <h1>{{ page.title }}</h1>
@@ -9,4 +11,5 @@ layout: default
 {{ content }}
 
 {% include disqus.html %}
+
 {% if page.comments %} • <a href="https://bingyuzhou.github.io{{ page.url }}#disqus_thread">0 Comments</a>{% endif %}
