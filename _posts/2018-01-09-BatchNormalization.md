@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Understansing the forward and backward pass of Batch Normalization"
 date:   2018-01-09 23:00:00
 categories: main

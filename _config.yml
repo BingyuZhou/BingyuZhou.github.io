@@ -5,6 +5,7 @@ baseurl:      ""
 paginate:     3
 locale:       "en"
 github_username: BingyuZhou
+timezone: Europe/Berlin
 
 # About/contact
 author:
