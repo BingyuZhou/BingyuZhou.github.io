@@ -21,3 +21,5 @@ plugins:
 markdown: kramdown
 kramdon:
   math_engine: mathjax
+
+theme: jekyll-theme-midnight
