@@ -4,6 +4,7 @@ comments: true
 title:  "Understansing the forward and backward pass of Batch Normalization"
 date:   2018-01-09 23:00:00
 categories: main
+feature_image:
 ---
 
 Batch normalization, as it is proposed in [1], is a popular technique in deep learning to speed up the training progress and reduce the difficulty to train deep neural networks. As the authors in [1] hypothsize that the shifted distribution of the features may causes the training much harder, especially at deep layers. The deep learning methods usually works better when the input of each layer have uncorrelated feature with a zero mean and an unit variance. Therefore, researchers come up with ideas to build up batch normalization layers which try to normalize the input to a nice distribution with zero mean and unit variance. 

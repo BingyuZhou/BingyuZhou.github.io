@@ -1,5 +1,21 @@
---- 
-layout: default 
 ---
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script> {{ content }}
+layout: default
+---
+{% include site-header.html %}
+
+<main class="main  container">
+
+    <article class="article  article--page  content  typeset">
+
+        <h1>{{ page.title }}</h1>
+
+        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script> {{ content }}
+
+    </article>
+
+    {% if page.aside == true %}{% include site-aside.html %}{% endif %}
+
+</main>
+
+{% include site-footer.html %}
