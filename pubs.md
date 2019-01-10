@@ -13,17 +13,31 @@ aside: false
 ---
 ### 2018
 
-- **B. Zhou**, W. Schwarting, D. Rus and J. Alonso-Mora, "Joint Multi-Policy Behavior Estimation and Receding-Horizon Trajectory Planning for Automated Urban Driving," 2018 IEEE International Conference on Robotics and Automation (ICRA), Brisbane, QLD, 2018, pp. 2388-2394. [pdf] [url](https://ieeexplore.ieee.org/abstract/document/8461138)
+- **Joint Multi-Policy Behavior Estimation and Receding-Horizon Trajectory Planning for Automated Urban Driving** \\
+**B. Zhou**, W. Schwarting, D. Rus and J. Alonso-Mora \\
+2018 IEEE International Conference on Robotics and Automation (ICRA), Brisbane, QLD, 2018, pp. 2388-2394. \\
+[pdf](2018-icra.pdf) [url](https://ieeexplore.ieee.org/abstract/document/8461138) [poster](2018-icra-poster.pdf) [video](https://www.youtube.com/watch?v=45BP9QlbPh8&t=3s)
 
-- Swaminathan, S.; Wang, X.; **Zhou, B.**; Baldi, S, "A University Building Test Case for Occupancy-Based Building Automation," Energies 2018, 11, 3145. [pdf] [url](https://www.mdpi.com/1996-1073/11/11/3145)
+- **A University Building Test Case for Occupancy-Based Building Automation** \\
+Swaminathan, S.; Wang, X.; **Zhou, B.**; Baldi, S \\
+Energies 2018, 11, 3145. \\
+[pdf](2018-energies.pdf) [url](https://www.mdpi.com/1996-1073/11/11/3145)
 
-- Moustakis N, **Zhou B**, Le Quang T, Baldi S, "Fault detection and identification for a class of continuous piecewise affine systems with unknown subsystems and partitions," Int J Adapt Control Signal Process. 2018;32:980–993. [pdf] [url](https://onlinelibrary.wiley.com/doi/full/10.1002/acs.2881)
+- **Fault detection and identification for a class of continuous piecewise affine systems with unknown subsystems and partitions** \\
+Moustakis N, **Zhou B**, Le Quang T, Baldi S \\
+International Journal of Adaptive Control and Signal Process. 2018;32:980–993. \\
+[pdf](2018-IJACSP.pdf) [url](https://onlinelibrary.wiley.com/doi/full/10.1002/acs.2881)
 
 ---
 ### 2017
 
-- **Bingyu Zhou**, H. Satyavada and S. Baldi, "Adaptive path following for Unmanned Aerial Vehicles in time-varying unknown wind environments," 2017 American Control Conference (ACC), Seattle, WA, 2017, pp. 1127-1132. [pdf] [url](https://ieeexplore.ieee.org/abstract/document/7963104)
+- **Adaptive path following for Unmanned Aerial Vehicles in time-varying unknown wind environments** \\
+**Bingyu Zhou**, H. Satyavada and S. Baldi \\
+2017 American Control Conference (ACC), Seattle, WA, 2017, pp. 1127-1132. \\
+[pdf](2017-ACC.pdf) [extension](pubs/2017-ACC-extension.pdf) [url](https://ieeexplore.ieee.org/abstract/document/7963104) [presentation](2017-ACC-slide.pdf) [code](https://github.com/BingyuZhou/UAV-path-following-under-time-varying-wind)
 
-- **Bingyu Zhou**, "Probabilistic Motion Planning in Uncertain and Dynamic Environments," (Master thesis, Delft University of Technology) [pdf] [url](https://repository.tudelft.nl/islandora/object/uuid%3Af491f7d8-a2f5-4f89-b4b7-86ac6b64546b)
+- **Probabilistic Motion Planning in Uncertain and Dynamic Environments** (Master thesis, Delft University of Technology) \\
+Bingyu Zhou \\
+[url](https://repository.tudelft.nl/islandora/object/uuid%3Af491f7d8-a2f5-4f89-b4b7-86ac6b64546b) [slide](master-defense.pdf)
 
 
