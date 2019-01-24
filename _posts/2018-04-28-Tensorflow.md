@@ -2,7 +2,7 @@
 layout: post
 title:  "Install GPU-enabled Tensorflow with Ubuntu 18.04"
 date:   2018-04-28 16:00:00
-categories: Framework
+categories: Software
 ---
 
 Ubuntu 18.04 is released recently. Many developers will adapt the Tensorflow development environment with the new GNOME style's Ubuntu OS. Here I show my successful installation of Tensorflow with GPU in Ubuntu 18.04. Hope it can help you out of the mess for multiple platforms' compatability.
