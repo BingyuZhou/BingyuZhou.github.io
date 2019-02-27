@@ -45,7 +45,8 @@ International Journal of Adaptive Control and Signal Process. 2018;32:980–993.
 <span style="color:green" class="fas fa-file-powerpoint"></span> [slide](2017-ACC-slide.pdf) &nbsp; 
 <span style="color:green" class="fas fa-file-code"></span> [code](https://github.com/BingyuZhou/UAV-path-following-under-time-varying-wind)
 
-- **Probabilistic Motion Planning in Uncertain and Dynamic Environments** (Master thesis, Delft University of Technology) \\
+- **Probabilistic Motion Planning in Uncertain and Dynamic Environments** \\
+(Master thesis, Delft University of Technology) \\
 Bingyu Zhou \\
 <span style="color:green" class="fas fa-link"></span> [link](https://repository.tudelft.nl/islandora/object/uuid%3Af491f7d8-a2f5-4f89-b4b7-86ac6b64546b) &nbsp; 
 <span style="color:green" class="fas fa-file-powerpoint"></span> [slide](master-defense.pdf)
