@@ -2,7 +2,8 @@
 title: Bio
 feature_text: |
   ## Bingyu Zhou
-  Robotics | Control | Deep Learning
+  Robotics | Control | Deep Learning\\
+  Email: bryan-by@hotmail.com
 feature_image: ""
 excerpt: "A short introduction."
 ---

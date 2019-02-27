@@ -5,7 +5,9 @@ date:   2019-02-20 10:00:00
 categories: Control
 ---
 
-This notebook introduces three common gaussian filters, *Kalman filter*, *extended Kalman filter* and *unscented Kalman filter*. Each filter has been implemented in Python and tested with a simple 3-order system. It highlights the feature of each filter and compares the performance between EKF and UKF.
+This notebook introduces three common gaussian filters, *Kalman filter*, *extended Kalman filter* and *unscented Kalman filter*. Each filter has been implemented in Python and tested with a simple 3-order system. It highlights the feature of each filter and compares the performance between EKF and UKF. The thorough theory behind can be found at [Wiki](https://en.wikipedia.org/wiki/Kalman_filter).
+
+Note that the implementation of each filter isn't polished for coding performance, since this blog focuses on the theory.
 
 
 ### Linear system
