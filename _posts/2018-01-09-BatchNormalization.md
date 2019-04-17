@@ -11,6 +11,8 @@ Batch normalization, as it is proposed in [1], is a popular technique in deep le
 
 The batch normalization layer is usually before nonlinear layers, like *ReLU* and *tanh*. In order to be consistent with the minibatch optimization, the input features are normalized according to the chosen batch. And the *running mean* and *running variance* are updated during each batch by an update rate called *momentum*. Eventually, the *running mean* and *running variance* will be the estimated mean and variance for the whole training data set. However, not all layers prefer the normalized input during the training preocess. The smart idea of batch normalization is the design of two learning parameters $$\gamma$$ and $$\beta$$. They control how much to unnormalize the features. When $$\gamma=\sqrt{\sigma}$$ and $$\beta=\mu$$, the original unnormalized features are restored. By learning these two parameters, the preference of input's distribution for each batch normalization layer can be specified. After training, the learning parameters ($$\gamma, \beta$$) and the *running mean* and the *running variance* are determined. They can be used in the test mode to normalize the input.
 
+![BN](/assets/bn.svg){: .center-image}
+
 ## Forward pass
 
 It is easy to understand and code the forward pass. Just pay attention that batch normalized is different in training and testing modes.
@@ -30,7 +32,7 @@ $$
 
 It is always more difficult to understand and implement the backward pass in neural networks. It takes me some time to calculate the derative of the batch normalization layer. The main difficulty lies in the chain-rule of derative and the matrix's derivative. When you read in the following math calculation, please **keep the size of the matrix** in mind! After all, the change of the dimention is one beauty of tensors.
 
-The backward pass is nothing else but to compute the deratives $$\frac{\partial f}{\partial x}$$, $$\frac{\partial f}{\partial \gamma}$$ and $$\frac{\partial f}{\partial \beta}$$.
+The backward pass is nothing else but to compute the deratives $$\frac{\partial l}{\partial x}$$, $$\frac{\partial l}{\partial \gamma}$$ and $$\frac{\partial l}{\partial \beta}$$.
 
 First we need to write down the relationship between the intermediat varibles and its parameters:
 
@@ -43,27 +45,28 @@ $$
 &\end{align*}
 $$
 
-Then it will be easier to compute the derivates $$\frac{\partial f}{\partial \gamma}$$ and $$\frac{\partial f}{\partial \beta}$$.
+Then it will be easier to compute the derivates $$\frac{\partial l}{\partial \gamma}$$ and $$\frac{\partial l}{\partial \beta}$$.
 
 $$
-\frac{\partial f}{\partial \gamma} = \sum{dout\hat{x}}
-\frac{\partial f}{\partial \beta} = \sum{dout}
+\frac{\partial l}{\partial \gamma} = \sum{\frac{\partial l}{\partial y}\hat{x}} \\
+
+\frac{\partial l}{\partial \beta} = \sum{\frac{\partial l}{\partial y}}
 $$
 
 As $$\hat{x}$$ is the normalized input, it is a matrix. But the $$\gamma$$ and $$\beta$$ are vectors. Therefore in consistent of the derative's size, we need to use $$\sum$$ along each feature (equivalent to each volume) to keep the size correct.
 
-Next we will compute $$\frac{\partial f}{\partial x}$$.
+Next we will compute $$\frac{\partial l}{\partial x}$$.
 
 I compute the derative in a manner of top-down.
 
 $$
-\frac{\partial f}{\partial x} = \frac{\partial f}{\partial \hat{x}}\frac{\partial \hat{x}}{\partial x} + \frac{\partial f}{\partial \mu}\frac{\partial \mu}{\partial x} + \frac{\partial f}{\partial \sigma^2}\frac{\partial \sigma^2}{\partial x}
+\frac{\partial l}{\partial x} = \frac{\partial l}{\partial \hat{x}}\frac{\partial \hat{x}}{\partial x} + \frac{\partial l}{\partial \mu}\frac{\partial \mu}{\partial x} + \frac{\partial l}{\partial \sigma^2}\frac{\partial \sigma^2}{\partial x}
 $$
 
 ---
 
 $$
-\frac{\partial f}{\partial \hat{x}} = \frac{\partial f}{\partial y}\frac{\partial y}{\partial \hat{x}} = dout*\gamma
+\frac{\partial l}{\partial \hat{x}} = \frac{\partial l}{\partial y}\frac{\partial y}{\partial \hat{x}} = \frac{\partial l}{\partial y}*\gamma
 $$
 
 ---
@@ -77,10 +80,10 @@ where $$np.ones(n)$$ is a vector to shape the vector $\sigma$ into a matrix with
 ---
 
 $$
-\frac{\partial f}{\partial \mu} = \sum{\frac{\partial f}{\partial \hat{x}}\frac{\partial \hat{x}}{\partial \mu}}+\frac{\partial f}{\partial \sigma^2}\frac{\partial \sigma^2}{\partial \mu}
+\frac{\partial l}{\partial \mu} = \sum{\frac{\partial l}{\partial \hat{x}}\frac{\partial \hat{x}}{\partial \mu}}+\frac{\partial l}{\partial \sigma^2}\frac{\partial \sigma^2}{\partial \mu}
 $$
 
-It is easy to calculate $$\frac{\partial f}{\partial \sigma^2}\frac{\partial \sigma^2}{\partial \mu}=0$$. And,
+It is easy to calculate $$\frac{\partial l}{\partial \sigma^2}\frac{\partial \sigma^2}{\partial \mu}=0$$. And,
 
 $$
 \frac{\partial \hat{x}}{\partial \mu} = -\sigma^{-1}
@@ -98,7 +101,7 @@ where (n, m) is the size of $$x$$.
 
 $$
 \begin{align*}
-\frac{\partial f}{\partial \sigma^2} &= \sum{\frac{\partial f}{\partial \hat{x}}\frac{\partial \hat{x}}{\partial \sigma^2}} \\
+\frac{\partial l}{\partial \sigma^2} &= \sum{\frac{\partial l}{\partial \hat{x}}\frac{\partial \hat{x}}{\partial \sigma^2}} \\
 \frac{\partial \hat{x}}{\partial \sigma^2} &= -\sum{(x-\mu)}\sigma^{-3}
 \end{align*}
 $$
@@ -111,10 +114,10 @@ $$
 
 ---
 
-Now, each component of $$\frac{\partial f}{\partial x}$$ is seperately computed. The final task is to use these components to calculate the derative:
+Now, each component of $$\frac{\partial l}{\partial x}$$ is seperately computed. The final task is to use these components to calculate the derative:
 
 $$
-\frac{\partial f}{\partial x} = \frac{1}{\sigma n}(n\frac{\partial f}{\partial \hat{x}} - \sum\frac{\partial f}{\partial \hat{x}} - \hat{x}\sum{\frac{\partial f}{\partial \hat{x}}\hat{x}})
+\frac{\partial l}{\partial x} = \frac{1}{\sigma n}(n\frac{\partial l}{\partial \hat{x}} - \sum\frac{\partial l}{\partial \hat{x}} - \hat{x}\sum{\frac{\partial l}{\partial \hat{x}}\hat{x}})
 $$
 
 In python, is should beauty
