@@ -9,5 +9,12 @@ html, body { height: 100%; }
 a img { border: none; }
 blockquote { quotes: none; }
 blockquote:before, blockquote:after { content: ''; content: none; }
-table { border-collapse: collapse; border-spacing: 0; }
-caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+table { border-collapse: collapse; border-spacing: 0; border:2px solid #000000;}
+th{
+    border:2px solid #000000;
+}
+
+td{
+    border:1px solid #000000;
+}
+caption, th, td { text-align: center; font-weight: normal; vertical-align: middle; }
