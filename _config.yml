@@ -10,27 +10,43 @@
 
 # 1. Files excluded from Jekyll builds
 exclude:
-- README.md
-- CODE_OF_CONDUCT.md
-- CONTRIBUTING.md
-- screenshot.png
-- LICENSE
-- CNAME
-- Gemfile
-- Gemfile.lock
-- alembic-jekyll-theme.gemspec
-- vendor
+  - README.md
+  - CODE_OF_CONDUCT.md
+  - CONTRIBUTING.md
+  - screenshot.png
+  - LICENSE
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - alembic-jekyll-theme.gemspec
+  - vendor
+
+# 7. Site settings
+encoding: utf-8 # Make sure the encoding is right
+lang: en-GB # Set the site language
+title: "Bingyu Zhou" # Site name or title, also used in jekyll-seo-tag
+logo: "/assets/logo.png" # Site logo, also used in jekyll-seo-tag
+description: "Robotics | Control | Deep learning" # Site description and default description, also used in jekyll-seo-tag
+url: "https://bingyuzhou.github.io/" # Site url, also used in jekyll-seo-tag
+baseurl: ""
+repo: "https://github.com/BingyuZhou/BingyuZhou.github.io"
+email: "bryan-by@hotmail.com"
+# disqus: "alembic-1" # Blog post comments, uncomment the option and set the site ID from your Disqus account
+# avatarurl: "https://www.gravatar.com/avatar/6c0377abcf4da91cdd35dea4554b2a4c" # Uses avatars for favicons to get multple sites, eg Gravatar, Twitter, GitHub
+google_analytics: "UA-135263586-1"
+# service_worker: false # Will turn off the service worker if set to false
+css_inline: true # Will insert all styles into a single <style> block in the <head> element and remove the style <link> reference
 
 # 2. Installed Gems
 plugins:
-- jekyll-sitemap
-- jekyll-mentions
-- jekyll-paginate
-- jekyll-seo-tag
-- jekyll-redirect-from
-- jekyll-default-layout
-- jekyll-feed
-- jemoji
+  - jekyll-sitemap
+  - jekyll-mentions
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+  - jekyll-default-layout
+  - jekyll-feed
+  - jemoji
 
 # 3. Gem settings
 paginate: 8 # jekyll-paginate > items per page
@@ -51,14 +67,14 @@ author: Bingyu Zhou # jekyll-seo-tag > default author
 # 4. Jekyll settings
 sass:
   style: compressed # Style compression
-permalink: pretty  # Permalink style (/YYYY/MM/DD/page-name/)
+permalink: pretty # Permalink style (/YYYY/MM/DD/page-name/)
 excerpt_separator: <!-- more --> # Marks end of excerpt in posts
 timezone: Europe/Berlin # Timezone for blog posts and alike
 
 # 5. Collections
 collections:
   posts:
-    title:  # Needed for Siteleaf
+    title: # Needed for Siteleaf
     output: true
     # description: "My thoughts and ideas" # The post list page content
     feature_text: |
@@ -67,27 +83,10 @@ collections:
 
 # 6. Jekyll collections settings
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
     values:
       image: "/assets/default-social-image.png" # Default image for sharing
-
-# 7. Site settings
-encoding: utf-8 # Make sure the encoding is right
-lang: en-GB # Set the site language
-title: "Bingyu Zhou" # Site name or title, also used in jekyll-seo-tag
-logo: "/assets/logo.png" # Site logo, also used in jekyll-seo-tag
-description: "Robotics | Control | Deep learning" # Site description and default description, also used in jekyll-seo-tag
-url: "https://bingyuzhou.github.io/" # Site url, also used in jekyll-seo-tag
-baseurl: ""
-repo: "https://github.com/BingyuZhou/BingyuZhou.github.io"
-email: "bryan-by@hotmail.com"
-# disqus: "alembic-1" # Blog post comments, uncomment the option and set the site ID from your Disqus account
-# avatarurl: "https://www.gravatar.com/avatar/6c0377abcf4da91cdd35dea4554b2a4c" # Uses avatars for favicons to get multple sites, eg Gravatar, Twitter, GitHub
-google_analytics: 'UA-135263586-1'
-# service_worker: false # Will turn off the service worker if set to false
-css_inline: true # Will insert all styles into a single <style> block in the <head> element and remove the style <link> reference
 
 # 8. Site navigation
 navigation_header:
@@ -102,26 +101,24 @@ navigation_footer:
   LinkedIn: https://www.linkedin.com/in/bingyuzhou
   GitHub: https://github.com/BingyuZhou
   Google Scholar: https://scholar.google.com/citations?user=6fjxG2MAAAAJ&hl=en
-  
 
 social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
   LinkedIn: https://www.linkedin.com/in/bingyuzhou
   GitHub: https://github.com/BingyuZhou
   Link: https://scholar.google.com/citations?user=6fjxG2MAAAAJ&hl=en
 
-
-sharing_links: # Appear at the bottom of single blog posts, uncomment and comment out as desired. Colours set the button colour
-  # Twitter: "#0d94e7"
-  # facebook: "#3B5998"
-  # Google+: "#DC4E41"
-  # Pinterest: "#BD081C"
-  # LinkedIn: "#0077B5"
-  # tumblr: "#36465D"
-  # Reddit: "#FF4500"
-  # Hacker News: "#ff6600"
-  # Designer News: "#2D72D9"
-  # Email: ""
-
+sharing_links:
+# Appear at the bottom of single blog posts, uncomment and comment out as desired. Colours set the button colour
+# Twitter: "#0d94e7"
+# facebook: "#3B5998"
+# Google+: "#DC4E41"
+# Pinterest: "#BD081C"
+# LinkedIn: "#0077B5"
+# tumblr: "#36465D"
+# Reddit: "#FF4500"
+# Hacker News: "#ff6600"
+# Designer News: "#2D72D9"
+# Email: ""
 #Others
 # markdown: kramdown
 # kramdon:
