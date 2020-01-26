@@ -8,6 +8,8 @@
 # 7. Site settings
 # 8. Site navigation
 
+theme: alembic-jekyll-theme
+
 # 1. Files excluded from Jekyll builds
 exclude:
   - README.md
@@ -20,22 +22,6 @@ exclude:
   - Gemfile.lock
   - alembic-jekyll-theme.gemspec
   - vendor
-
-# 7. Site settings
-encoding: utf-8 # Make sure the encoding is right
-lang: en-GB # Set the site language
-title: "Bingyu Zhou" # Site name or title, also used in jekyll-seo-tag
-logo: "/assets/logo.png" # Site logo, also used in jekyll-seo-tag
-description: "Robotics | Control | Deep learning" # Site description and default description, also used in jekyll-seo-tag
-url: "https://bingyuzhou.github.io/" # Site url, also used in jekyll-seo-tag
-baseurl: ""
-repo: "https://github.com/BingyuZhou/BingyuZhou.github.io"
-email: "bryan-by@hotmail.com"
-# disqus: "alembic-1" # Blog post comments, uncomment the option and set the site ID from your Disqus account
-# avatarurl: "https://www.gravatar.com/avatar/6c0377abcf4da91cdd35dea4554b2a4c" # Uses avatars for favicons to get multple sites, eg Gravatar, Twitter, GitHub
-google_analytics: "UA-135263586-1"
-# service_worker: false # Will turn off the service worker if set to false
-css_inline: true # Will insert all styles into a single <style> block in the <head> element and remove the style <link> reference
 
 # 2. Installed Gems
 plugins:
@@ -87,6 +73,23 @@ defaults:
       path: ""
     values:
       image: "/assets/default-social-image.png" # Default image for sharing
+
+# 7. Site settings
+theme: 
+encoding: utf-8 # Make sure the encoding is right
+lang: en-GB # Set the site language
+title: "Bingyu Zhou" # Site name or title, also used in jekyll-seo-tag
+logo: "/assets/logo.png" # Site logo, also used in jekyll-seo-tag
+description: "Robotics | Control | Deep learning" # Site description and default description, also used in jekyll-seo-tag
+url: "https://bingyuzhou.github.io/" # Site url, also used in jekyll-seo-tag
+baseurl: ""
+repo: "https://github.com/BingyuZhou/BingyuZhou.github.io"
+email: "bryan-by@hotmail.com"
+# disqus: "alembic-1" # Blog post comments, uncomment the option and set the site ID from your Disqus account
+# avatarurl: "https://www.gravatar.com/avatar/6c0377abcf4da91cdd35dea4554b2a4c" # Uses avatars for favicons to get multple sites, eg Gravatar, Twitter, GitHub
+google_analytics: "UA-135263586-1"
+# service_worker: false # Will turn off the service worker if set to false
+css_inline: true # Will insert all styles into a single <style> block in the <head> element and remove the style <link> reference
 
 # 8. Site navigation
 navigation_header:
