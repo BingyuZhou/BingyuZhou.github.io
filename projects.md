@@ -1,5 +1,6 @@
 ---
 title: 
+layout: blog
 feature_text: |
   ## Projects
 feature_image: ""
