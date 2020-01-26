@@ -62,18 +62,16 @@ collections_dir: collections
 
 collections:
   posts:
-    title: Posts # Needed for Siteleaf
+    title:  # Needed for Siteleaf
     output: true
     # description: "My thoughts and ideas" # The post list page content
     feature_text: |
       ## Blog
-    feature_image: ""
   projects:
     title: Projects # Needed for Siteleaf
     output: true
     feature_text: |
       ## Projects
-    feature_image: ""
 
 # 6. Jekyll collections settings
 defaults:
