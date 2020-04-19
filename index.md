@@ -4,7 +4,7 @@ feature_text: |
   ## Bingyu Zhou
   Robotics | Control | Deep Learning\\
   Email: bryan-by [at] hotmail.com
-feature_image: ""
+feature_image: "/assets/cover.jpg"
 excerpt: "A short introduction."
 ---
 
