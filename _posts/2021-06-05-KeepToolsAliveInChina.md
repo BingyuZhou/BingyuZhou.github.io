@@ -31,3 +31,9 @@ One trick of GFW is DNS pollution. We need to find the correct domain and ip add
 185.199.110.153 assets-cdn.github.com
 185.199.111.153 assets-cdn.github.com
 ```
+
+## ladder
+
+[v2ray](https://bella722.github.io/post/a231f91f.html)
+
+[nodes](https://github.com/freefq/free)
